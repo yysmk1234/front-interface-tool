@@ -2,9 +2,9 @@ const neDb = require('./dao');
 const path = require('path');
 const db = new neDb(path.join(__dirname,'../../datafile/data'));
 
-async function test(){
-    let res = await db.remove({}, { multi: true });
-    console.log("res",res);
-}   
+const reponseService = {};
 
-test();
+reponseService.addResponse = async ( params ) => {
+    let res = await db.insert( params );
+    return res;
+}
