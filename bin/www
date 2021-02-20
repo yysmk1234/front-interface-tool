@@ -18,9 +18,9 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '9000');
-var frontPort = normalizePort('9001');
-app.set('port', port);
+// var port = normalizePort(process.env.PORT || '9000');
+var frontPort = normalizePort('9000');
+// app.set('port', port);
 frontApp.set('port',frontPort);
 
 /**
@@ -31,7 +31,6 @@ var frontServer = http.createServer(frontApp);
 /**
  * Listen on provided port, on all network interfaces.
  */
-
 
 /*
 front-app
@@ -45,7 +44,6 @@ console.log("frontServer is listenting on " + frontPort);
 /**
  * Normalize a port into a number, string, or false.
  */
-
 function normalizePort(val) {
   var port = parseInt(val, 10);
 
