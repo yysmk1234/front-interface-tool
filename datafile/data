@@ -1,3 +1,4 @@
 {"method":"POST","url":"/tst","dalyTime":"3","body":"","_id":"PSlrBvzFikXmKSCf"}
 {"method":"POST","url":"/tsts","dalyTime":0,"body":"","_id":"RTfEkWX2oIRvQLDN"}
+{"method":"GET","url":"/test1","dalyTime":"5000","body":"{\n\"code\":0\n}","_id":"XkrzdS50RGsOGafn"}
 {"method":"POST","url":"/testdds","dalyTime":"4","body":"{\n\"code\":0\n}","_id":"cZz39lIgRbI3v4G4"}
