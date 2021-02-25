@@ -25,7 +25,7 @@ handleResponse();
 function handleGetResquest(item) {
   router.get(item.url, function (req, res, next) {
     setTimeout(() => {
-      res.send(item.body);
+      res.status(item.statusCode).send(item.body);
     }, item.dalyTime)
   });
 }
@@ -33,7 +33,7 @@ function handleGetResquest(item) {
 function handlePostResquest(item) {
   router.post(item.url, function (req, res, next) {
     setTimeout(() => {
-      res.send(item.body);
+      res.status(item.statusCode).send(item.body);
     }, item.dalyTime)
   });
 }

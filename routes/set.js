@@ -19,5 +19,16 @@ router.post('/addResponse',async function(req, res, next) {
     res.send(result);
 })
 
+router.post('/getResponse',async function(req, res, next) {
+    let body = req.body;
+    let result = await controllerResponse.getAllResponse(body);
+    res.send(result);
+})
+
+router.post('/updateResponseById',async function(req, res, next) {
+    let body = req.body;
+    let result = await controllerResponse.updateResponseById(body);
+    res.send(result);
+})
 
 module.exports = router;
