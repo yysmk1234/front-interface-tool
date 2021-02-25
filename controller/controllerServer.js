@@ -72,4 +72,22 @@ controllerServer.shutDownServer = async () => {
   return returnModel;
 }
 
+controllerServer.getServerStatus = () => {
+  let returnModel = new RetrunModel;
+  if(CHILD_PROCESS){
+    returnModel.setCode(2000);
+    returnModel.setMessage('');
+    returnModel.setData({
+      serverStatus:2
+    });
+  }else{
+    returnModel.setCode(2000);
+    returnModel.setMessage('');
+    returnModel.setData({
+      serverStatus:0
+    });
+  }
+  return returnModel;
+}
+
 module.exports = controllerServer;

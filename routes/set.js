@@ -13,6 +13,11 @@ router.get('/restartInterfaceServer',async function(req, res, next) {
     res.send(result);
 });
 
+router.get('/getServerStatus', function(req, res, next) {
+    let result = controllerServer.getServerStatus();
+    res.send(result);
+});
+
 router.post('/addResponse',async function(req, res, next) {
     let body = req.body;
     let result = await controllerResponse.addResponse(body);
