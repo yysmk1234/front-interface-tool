@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+const PROCESS_CODE = require('../config/process.config');
 /**
  * Module dependencies.
  */
@@ -32,8 +32,27 @@ server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 console.log("server is listenting on " + port);
-process.send({serverStatus:1});
+process.send({
+  code:PROCESS_CODE.PROCESS_START,
+  serverStatus:1,
+  prot:port
+});
 
+
+process.on('message',handleMessage)
+//定义通信方法
+function handleMessage (data) {
+  console.log("getMessage");
+  switch (data.code){
+    case  PROCESS_CODE.PROCESS_INFO:
+      process.send({
+        code:PROCESS_CODE.PROCESS_INFO,
+        serverStatus:1,
+        prot:port
+      })
+      break;
+  }
+}
 
 /**
  * Normalize a port into a number, string, or false.

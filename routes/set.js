@@ -14,8 +14,10 @@ router.get('/restartInterfaceServer',async function(req, res, next) {
 });
 
 router.get('/getServerStatus', function(req, res, next) {
-    let result = controllerServer.getServerStatus();
-    res.send(result);
+    controllerServer.getServerStatus((result)=>{
+        console.log("result",result);
+        res.send(result);
+    });
 });
 
 router.post('/addResponse',async function(req, res, next) {

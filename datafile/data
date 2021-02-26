@@ -1,2 +1,5 @@
+{"method":"POST","url":"/test3","delayTime":"2000","statusCode":200,"body":"{\n\"code\":0\n}","_id":"DB0915CGPpBoTa2C"}
+{"method":"GET","url":"/test2","delayTime":"3000","statusCode":"304","body":"{\n\"code\":\"ok\"\n}","_id":"DXJirk5hb8F5r2ik"}
+{"method":"POST","url":"/test4","delayTime":0,"statusCode":200,"body":"{\n\"code\":\"ok\"\n}","_id":"VdqWIjB71lkS7O4l"}
 {"method":"POST","url":"/test1","delayTime":"1000","statusCode":"200","body":"{\n\"code\":\"ok\"\n}","_id":"VqFf90lrPbCThPRO"}
 {"method":"GET","url":"/test","delayTime":0,"statusCode":"500","body":"{\n\"code\":\"ok\"\n}","_id":"y3T7wGQk5ov11fyp"}
